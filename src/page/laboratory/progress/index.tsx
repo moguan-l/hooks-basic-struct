@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import { Row, Col, Progress, Button } from 'antd';
-import { appContext } from '../store';
+import { Row, Col, Progress as AntProgress, Button } from 'antd';
+import { context } from '@/store/laboratory';
 
-export default function Home(): JSX.Element {
-  const { state, dispatch } = useContext(appContext);
+export default function Progress(): JSX.Element {
+  const { state, dispatch } = useContext(context);
   return (
     <>
       <Row>
         <Col span={8} offset={8}>
-          <Progress percent={state.progress} />
+          <AntProgress percent={state.progress} />
         </Col>
       </Row>
       <Row>

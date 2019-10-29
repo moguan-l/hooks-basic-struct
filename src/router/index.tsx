@@ -1,14 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
-import Home from '../page';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Store as LaboratoryRouter } from '@/store/laboratory';
+import Home from '@/page/index';
 
 export default function AppRouter(): JSX.Element {
   return (
     <Router>
-      <Route path="/">
-        <Home />
-      </Route>
+      <Switch>
+        <Route path="/" component={Home} />
+        <LaboratoryRouter />
+      </Switch>
     </Router>
   );
 }
