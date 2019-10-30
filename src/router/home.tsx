@@ -1,11 +1,12 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Progress } from '@/pages/laboratory';
+import Home from '@/pages/home';
 
 export default function Routes(): JSX.Element {
   return (
     <>
-      <Route path="/laboratory/progress" component={Progress} />
+      <Route path="/" exact component={Home} />
+      <Route path="/index" component={Home} />
     </>
-  )
+  );
 }

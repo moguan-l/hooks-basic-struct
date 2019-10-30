@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Row, Col, Progress as AntProgress, Button } from 'antd';
-import { context } from '@/store/laboratory';
+import { context } from '@/stores/laboratory';
 
 export default function Progress(): JSX.Element {
   const { state, dispatch } = useContext(context);

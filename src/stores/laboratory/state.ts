@@ -1,4 +1,4 @@
-const state: Laboratory.state = {
+const state: Laboratory.State = {
   progress: 30,
 };
 

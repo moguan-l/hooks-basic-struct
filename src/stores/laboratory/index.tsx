@@ -1,11 +1,11 @@
 import React, { createContext, useReducer } from 'react';
-import Router from '@/router';
+import Router from '@/router/laboratory';
 import initialState from './state';
 import reducer from './reducer';
 
-export const context: React.Context<App.context> = createContext({ state: initialState, dispatch: null });
+export const context: React.Context<Laboratory.Context> = createContext({ state: initialState, dispatch: null });
 
-const Provider: React.ProviderExoticComponent<React.ProviderProps<App.context>> = context.Provider;
+const Provider: React.ProviderExoticComponent<React.ProviderProps<Laboratory.Context>> = context.Provider;
 
 export function Store(): JSX.Element {
   const [state, dispatch] = useReducer(reducer, initialState);
