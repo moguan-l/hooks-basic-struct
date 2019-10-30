@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "hooks-basic-struct",
+  "name": "Typescript, React hooks, Redux base on context",
   "icons": [
     {
       "src": "favicon.ico",
