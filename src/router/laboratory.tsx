@@ -7,5 +7,5 @@ export default function Routes(): JSX.Element {
     <>
       <Route path="/laboratory/progress" component={Progress} />
     </>
-  )
+  );
 }

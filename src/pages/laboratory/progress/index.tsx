@@ -14,8 +14,18 @@ export default function Progress(): JSX.Element {
       <Row>
         <Col span={8} offset={8}>
           <Button.Group>
-            <Button type="primary" onClick={() => dispatch({ type: 'decrease' })}>减少</Button>
-            <Button type="primary" onClick={() => dispatch({ type: 'increase' })}>增加</Button>
+            <Button
+              type="primary"
+              onClick={() => dispatch({ type: 'decrease' })}
+            >
+              减少
+            </Button>
+            <Button
+              type="primary"
+              onClick={() => dispatch({ type: 'increase' })}
+            >
+              增加
+            </Button>
           </Button.Group>
         </Col>
       </Row>
