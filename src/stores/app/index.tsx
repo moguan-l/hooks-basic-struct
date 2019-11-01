@@ -8,9 +8,7 @@ export const context: React.Context<App.Context> = createContext({
   dispatch: null
 });
 
-const Provider: React.ProviderExoticComponent<
-  React.ProviderProps<App.Context>
-> = context.Provider;
+const Provider = context.Provider;
 
 export function Store(): JSX.Element {
   const [state, dispatch] = useReducer(reducer, initialState);

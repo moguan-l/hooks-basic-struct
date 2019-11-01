@@ -1,2 +1,2 @@
 /// <reference types="react-scripts" />
-/// <reference types="./store" />
+/// <reference types="app" />

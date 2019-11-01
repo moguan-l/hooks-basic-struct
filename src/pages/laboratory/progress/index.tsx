@@ -1,9 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Row, Col, Progress as AntProgress, Button } from 'antd';
+import { getProgress } from '@/services/laboratory';
 import { context } from '@/stores/laboratory';
 
 export default function Progress(): JSX.Element {
   const { state, dispatch } = useContext(context);
+
+  useEffect(() => {
+    getProgress();
+  }, []);
+
   return (
     <>
       <Row>
