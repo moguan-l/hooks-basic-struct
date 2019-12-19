@@ -1,1 +1,1 @@
-export const baseURL: string = 'https://www.apiopen.top'
+export const baseURL = 'https://www.apiopen.top'

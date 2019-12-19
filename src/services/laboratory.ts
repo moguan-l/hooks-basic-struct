@@ -1,3 +1,3 @@
 import axios from 'axios'
 
-export const getProgress = () => axios.get('/journalismApi')
+export const getProgress: Common.Service = () => axios.get('/journalismApi')

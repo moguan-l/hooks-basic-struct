@@ -1,4 +1,4 @@
-namespace Common {
+declare namespace Common {
   interface State {
     [propName: string]: any
   }
@@ -12,11 +12,13 @@ namespace Common {
     state: State
     dispatch: any
   }
+
+  type Service = () => Promise<AxiosResponse<any>>
 }
 
-namespace App {
+declare namespace App {
   interface State extends Common.State {
-    someProps: any
+    [propName: string]: any
   }
 
   interface Context extends Common.Context {
@@ -24,7 +26,7 @@ namespace App {
   }
 }
 
-namespace Laboratory {
+declare namespace Laboratory {
   interface State extends Common.State {
     progress: number
   }
