@@ -15,9 +15,13 @@ namespace Common {
 }
 
 namespace App {
-  interface State extends Common.State {}
+  interface State extends Common.State {
+    someProps: any
+  }
 
-  interface Context extends Common.Context {}
+  interface Context extends Common.Context {
+    state: State
+  }
 }
 
 namespace Laboratory {

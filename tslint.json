@@ -6,6 +6,7 @@
     "prettier": true,
     "no-implicit-dependencies": false,
     "no-submodule-imports": false,
+    "no-namespace": false,
     "ordered-imports": false,
     "object-literal-sort-keys": false,
     "interface-name": false,
