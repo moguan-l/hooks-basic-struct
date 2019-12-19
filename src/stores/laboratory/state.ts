@@ -1,5 +1,5 @@
 const state: Laboratory.State = {
-  progress: 30
-};
+  progress: 30,
+}
 
-export default state;
+export default state

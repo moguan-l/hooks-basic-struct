@@ -1,10 +1,8 @@
-import React from 'react';
-import { Button, Spin } from 'antd';
-import './index.scss';
+import React from 'react'
+import { Button, Spin } from 'antd'
+import './index.scss'
 
-export default function PageLoading(
-  props: LoadableExport.LoadingComponentProps
-): JSX.Element {
+export default function PageLoading(props: LoadableExport.LoadingComponentProps): JSX.Element {
   return (
     <div className="page-loading">
       {props.error ? (
@@ -25,5 +23,5 @@ export default function PageLoading(
         <Spin size="large" tip="加载中" />
       ) : null}
     </div>
-  );
+  )
 }

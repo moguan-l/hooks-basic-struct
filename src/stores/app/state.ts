@@ -1,3 +1,3 @@
-const state: App.State = {};
+const state: App.State = {}
 
-export default state;
+export default state

@@ -1,20 +1,20 @@
-import React, { createContext, useReducer } from 'react';
-import Router from '@/router/laboratory';
-import initialState from './state';
-import reducer from './reducer';
+import React, { createContext, useReducer } from 'react'
+import Router from '@/router/laboratory'
+import initialState from './state'
+import reducer from './reducer'
 
 export const context: React.Context<Laboratory.Context> = createContext({
   state: initialState,
-  dispatch: null
-});
+  dispatch: null,
+})
 
-const Provider = context.Provider;
+const Provider = context.Provider
 
 export function Store(): JSX.Element {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState)
   return (
     <Provider value={{ state, dispatch }}>
       <Router />
     </Provider>
-  );
+  )
 }

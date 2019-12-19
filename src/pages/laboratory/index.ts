@@ -1,3 +1,3 @@
-import asyncLoad from '@/utils/async-load';
+import asyncLoad from '@/utils/async-load'
 
-export const Progress = asyncLoad(() => import('./progress'));
+export const Progress = asyncLoad(() => import('./progress'))

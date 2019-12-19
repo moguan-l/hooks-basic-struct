@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import '@/utils/init';
+import '@/utils/init'
 
-import { Store as App } from '@/stores/app';
+import { Store as App } from '@/stores/app'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))

@@ -1,16 +1,16 @@
 namespace Common {
   interface State {
-    [propName: string]: any;
+    [propName: string]: any
   }
 
   interface Action {
-    type: string;
-    [propName: string]: any;
+    type: string
+    [propName: string]: any
   }
 
   interface Context {
-    state: State;
-    dispatch: any;
+    state: State
+    dispatch: any
   }
 }
 
@@ -22,10 +22,10 @@ namespace App {
 
 namespace Laboratory {
   interface State extends Common.State {
-    progress: number;
+    progress: number
   }
 
   interface Context extends Common.Context {
-    state: State;
+    state: State
   }
 }

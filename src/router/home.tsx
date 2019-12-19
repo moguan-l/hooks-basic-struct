@@ -1,6 +1,6 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import Home from '@/pages/home';
+import React from 'react'
+import { Route } from 'react-router-dom'
+import Home from '@/pages/home'
 
 export default function Routes(): JSX.Element {
   return (
@@ -8,5 +8,5 @@ export default function Routes(): JSX.Element {
       <Route path="/" exact component={Home} />
       <Route path="/index" component={Home} />
     </>
-  );
+  )
 }
