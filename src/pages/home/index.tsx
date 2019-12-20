@@ -15,6 +15,10 @@ export default function Home(): JSX.Element {
       name: 'redux-progress',
       link: '/laboratory/progress',
     },
+    {
+      name: 'news',
+      link: '/laboratory/news',
+    },
   ]
 
   const renderItem: (item: LinkItem, index: number) => JSX.Element = (item, index) => {

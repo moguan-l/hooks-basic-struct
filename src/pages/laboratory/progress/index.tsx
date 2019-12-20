@@ -1,15 +1,10 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { Progress as AntProgress, Button } from 'antd-mobile'
-import { getProgress } from '@/services/laboratory'
 import { context } from '@/stores/laboratory'
 import './index.scss'
 
 export default function Progress(): JSX.Element {
   const { state, dispatch } = useContext(context)
-
-  useEffect(() => {
-    getProgress()
-  }, [])
 
   return (
     <>
