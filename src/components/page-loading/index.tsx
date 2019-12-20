@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Spin } from 'antd'
+import { Button, ActivityIndicator } from 'antd-mobile'
 import './index.scss'
 
 export default function PageLoading(props: LoadableExport.LoadingComponentProps): JSX.Element {
@@ -20,7 +20,7 @@ export default function PageLoading(props: LoadableExport.LoadingComponentProps)
           </Button>
         </>
       ) : props.pastDelay ? (
-        <Spin size="large" tip="加载中" />
+        <ActivityIndicator />
       ) : null}
     </div>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { List, Row, Col } from 'antd'
+import { useHistory } from 'react-router-dom'
+import { List } from 'antd-mobile'
 import './index.scss'
 
 interface LinkItem {
@@ -9,6 +9,7 @@ interface LinkItem {
 }
 
 export default function Home(): JSX.Element {
+  const history = useHistory()
   const laboratoryList: LinkItem[] = [
     {
       name: 'redux-progress',
@@ -16,21 +17,13 @@ export default function Home(): JSX.Element {
     },
   ]
 
-  const renderItem: (item: LinkItem) => JSX.Element = item => {
+  const renderItem: (item: LinkItem, index: number) => JSX.Element = (item, index) => {
     return (
-      <List.Item>
-        <Link to={item.link}>{item.name}</Link>
+      <List.Item key={index} arrow="horizontal" onClick={(): void => history.push(item.link)}>
+        {item.name}
       </List.Item>
     )
   }
 
-  return (
-    <div className="home">
-      <Row>
-        <Col span={8} offset={8}>
-          <List header="Laboratory" bordered dataSource={laboratoryList} renderItem={renderItem} />
-        </Col>
-      </Row>
-    </div>
-  )
+  return <List renderHeader={(): string => 'Laboratory'}>{laboratoryList.map(renderItem)}</List>
 }
