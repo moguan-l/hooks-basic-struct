@@ -1,9 +1,9 @@
 import Loadable from 'react-loadable'
-import defaultLoading from '@/components/page-loading'
+import { PageLoading } from '@/components'
 
 export default function asyncLoad(
   loader: () => Promise<any>,
-  loading = defaultLoading
+  loading = PageLoading
 ):
   | (React.ComponentClass<unknown, any> & Loadable.LoadableComponent)
   | (React.FunctionComponent<any> & Loadable.LoadableComponent) {
