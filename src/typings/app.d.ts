@@ -13,7 +13,7 @@ declare namespace Common {
     dispatch: any
   }
 
-  type Service = () => Promise<AxiosResponse<any>>
+  type Service = (param?: any) => Promise<AxiosResponse<any>>
 }
 
 declare namespace App {
