@@ -1,9 +1,14 @@
 import React, { createContext, useReducer } from 'react'
 import Router from '@/router/laboratory'
-import initialState from './state'
+import initialState, { LaboratoryState } from './state'
 import reducer from './reducer'
 
-export const context: React.Context<Laboratory.Context> = createContext({
+interface LaboratoryContext {
+  state: LaboratoryState
+  dispatch: any
+}
+
+export const context: React.Context<LaboratoryContext> = createContext({
   state: initialState,
   dispatch: null,
 })
