@@ -1,9 +1,7 @@
-import initialState from './state'
+import { Action } from '../type'
+import initialState, { LaboratoryState } from './state'
 
-const reducer: (state: Laboratory.State, action: Common.Action) => Laboratory.State = (
-  state = initialState,
-  action
-) => {
+const reducer: (state: LaboratoryState, action: Action) => LaboratoryState = (state = initialState, action) => {
   switch (action.type) {
     case 'increase': {
       const { progress } = state

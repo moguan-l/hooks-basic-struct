@@ -1,9 +1,14 @@
 import React, { createContext, useReducer } from 'react'
 import Router from '@/router'
-import initialState from './state'
+import initialState, { AppState } from './state'
 import reducer from './reducer'
 
-export const context: React.Context<App.Context> = createContext({
+interface AppContext {
+  state: AppState
+  dispatch: any
+}
+
+export const context: React.Context<AppContext> = createContext({
   state: initialState,
   dispatch: null,
 })

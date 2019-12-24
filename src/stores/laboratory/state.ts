@@ -1,4 +1,8 @@
-const state: Laboratory.State = {
+export type LaboratoryState = {
+  progress: number
+}
+
+const state: LaboratoryState = {
   progress: 30,
 }
 
